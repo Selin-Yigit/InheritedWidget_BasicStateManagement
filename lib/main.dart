@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:statefulapp_course/ApiClass.dart';
+import 'package:statefulapp_course/ApiProvider.dart';
 import 'package:statefulapp_course/homePage.dart';
 
 void main() {
@@ -14,7 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        "/":(BuildContext context) => const HomePage(),
+        "/": (BuildContext context) => ApiProvider(
+              api: API(),
+              child: const HomePage(),
+            ),
       },
       initialRoute: "/",
     );
