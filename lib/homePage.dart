@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String title = "Tp the screen !!";
+  String title = "Tap the screen !!";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
